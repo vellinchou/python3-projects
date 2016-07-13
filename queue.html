@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Queue(){
+            var items = [];
+            this.pushQueue = function(e){
+                // 添加队列
+               return items.push(e)
+            }
+            this.deleteQueue = function(){
+                // 删除头元素
+                return items.shift()
+            }
+            this.size = function(){
+                // 返回总长度
+                return items.length
+            }
+            this.isEmpty = function(){
+                return items.length == 0
+            }
+            this.catItems = function(){
+                return items
+            }
+        }
+
+        var queue = new Queue();
+        queue.pushQueue(5);
+        queue.pushQueue(9);
+        queue.pushQueue(10);
+        queue.deleteQueue();
+        console.log(queue.catItems());
+
+    </script>
+    
+</body>
+</html>
